@@ -1,0 +1,7 @@
+D:\Programmering\Repositories\GitHub\Bachelor\DependencyInversion_API\DependencyInversion_API\bin\Debug\DependencyInversion_API.exe.config
+D:\Programmering\Repositories\GitHub\Bachelor\DependencyInversion_API\DependencyInversion_API\bin\Debug\DependencyInversion_API.exe
+D:\Programmering\Repositories\GitHub\Bachelor\DependencyInversion_API\DependencyInversion_API\bin\Debug\DependencyInversion_API.pdb
+D:\Programmering\Repositories\GitHub\Bachelor\DependencyInversion_API\DependencyInversion_API\obj\Debug\DependencyInversion_API.csprojAssemblyReference.cache
+D:\Programmering\Repositories\GitHub\Bachelor\DependencyInversion_API\DependencyInversion_API\obj\Debug\DependencyInversion_API.csproj.CoreCompileInputs.cache
+D:\Programmering\Repositories\GitHub\Bachelor\DependencyInversion_API\DependencyInversion_API\obj\Debug\DependencyInversion_API.exe
+D:\Programmering\Repositories\GitHub\Bachelor\DependencyInversion_API\DependencyInversion_API\obj\Debug\DependencyInversion_API.pdb
