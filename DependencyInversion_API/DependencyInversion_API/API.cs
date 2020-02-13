@@ -32,24 +32,24 @@ namespace DependencyInversion_API
         public async Task<IBook> FindReviews(string title) {
             //url for the API call.
             //Response is currently returning null, indicating that the URL is wrong or something else.
-            string response;
-            try
-            {
-                var uri = new Uri($"https://www.goodreads.com/title.XML?key{APIkey}?title={title}");
+            var uri = new Uri($"https://www.goodreads.com/title.XML?key={APIkey}?title={title}");
+            HttpResponseMessage response = await client.GetAsync(uri);
+             //response = await client.GetStringAsync(uri);
 
-                response = await client.GetStringAsync(uri);
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
             IBook book = Factory.CreateBook();
             //XML to Linq
-            var xml = XDocument.Load(response);
-            IEnumerable<string> reviews = from item in xml.Descendants("work") select (string)item.Attribute("text_reviews_count");
-            book.Reviews = reviews.ToList();
+            if (response.IsSuccessStatusCode)
+            {
+                var xml = XDocument.Load(response.Content);
+                IEnumerable<string> reviews = from item in xml.Descendants("work") select (string)item.Attribute("text_reviews_count");
+                book.Reviews = reviews.ToList();
+
+            }
+            else
+            {
+                Console.WriteLine("error: " + response.StatusCode);
+            }
+
             return book;
         }
     }
